@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREAKOUT GAME</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(img/bcc.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #gameover{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /* background: rgba(0, 0, 0 0.5); */
+        }
+        #gameover img{
+            width: 100%;
+            height: 100%;
+        }
+        #youwin{
+            display: none;
+        }
+        #youloose{
+            display: none;
+        }
+        #restart{       
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 85%;
+    left: 0;
+    right: 0;
+    margin: 10px auto;
+    cursor: pointer;
+    background-color: goldenrod;
+    border-radius: 10px 40px;
+    font-weight: bold;
+    font-size: 20px;
+    height: 63px;
+    width: 302px;
+    line-height: 63px;
+    cursor: pointer;
+        }
+        #myCanvas{
+            border: 1px solid goldenrod;
+        }
+    </style>
+</head>
+<body style="display: grid; align-content: center; justify-content: center; overflow: hidden;">
+    <canvas id="myCanvas" width="400" height="500" style="width: 100%; height: 100vh;">
+    </canvas>
+
+    <div id="gameover">
+        <img src="img/winner.png" id="youwin">
+        <img src="img/gameover.png" id="youloose">
+        <div id="restart">Play Again!</div>
+    </div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
